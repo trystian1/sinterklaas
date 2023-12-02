@@ -1,5 +1,6 @@
 "use client"
 
+import { useContinueHook } from "../continue-hook";
 import { Poem } from "../poem-component"
 const text = `
 Wat is dit nou, er zit ook nog aan hangslot aan het blik
@@ -21,7 +22,8 @@ Marieke doe alsjeblieft een keer rustig aan met de Champagne
 
 `
 
-export const ContentComponent = () => {    
+export const ContentComponent = () => {   
+   useContinueHook('step-8', 'stap-9'); 
     return (<>
       <Poem text={text} callBack={() => null}/>
     </>
