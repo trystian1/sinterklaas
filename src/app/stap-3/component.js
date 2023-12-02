@@ -31,7 +31,7 @@ export const ContentComponent = () => {
             setFetchingImage(true);
             setLoading(true);
             const fetchImage = async () => {
-                const response = await fetch(`https://whattoeat-cc0b1.ew.r.appspot.com/image-stap-3?answer=${answer}`)
+                const response = await fetch(`https://whattoeat-cc0b1.ew.r.appspot.com/image-stap-3?answer=${answer}`, { mode: 'no-cors' })
                 const data = await response.json();
                 setImageUrl(data.imageUrl);
                 setLoading(false);
@@ -48,7 +48,7 @@ export const ContentComponent = () => {
         console.log('RUN?')
         const getAnswer = async () => {
             setTimeout(async () => {
-                const response = await fetch('https://whattoeat-cc0b1.ew.r.appspot.com/anwser-get-3')
+                const response = await fetch('https://whattoeat-cc0b1.ew.r.appspot.com/anwser-get-3', { mode: 'no-cors' })
                 const data = await response.json();
                 if (data.answer) {
                     setAnswer(data.answer)

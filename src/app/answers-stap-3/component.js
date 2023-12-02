@@ -8,7 +8,7 @@ export const InputField = () => {
     const [inputText, setInputText] = useState(""); 
     const [givenAnswer, setGivenAnswer] = useState(false); 
     const sendAnswer = async () => {
-        await fetch(`https://whattoeat-cc0b1.ew.r.appspot.com/set-anwser-stap-3?inputText=${inputText}`);
+        await fetch(`https://whattoeat-cc0b1.ew.r.appspot.com/set-anwser-stap-3?inputText=${inputText}`, { mode: 'no-cors' });
         //window.location = '/continue-3';
         setGivenAnswer(true)
     }

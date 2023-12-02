@@ -28,7 +28,7 @@ export const ContentComponent = () => {
         console.log('RUN?')
         const getAnswer = async () => {
             setTimeout(async () => {
-                const response = await fetch('https://whattoeat-cc0b1.ew.r.appspot.com/anwser-get-4')
+                const response = await fetch('https://whattoeat-cc0b1.ew.r.appspot.com/anwser-get-4', { mode: 'no-cors' })
                 const data = await response.json();
                 if (data.correct) {
                     setAnswer(data.answer)
