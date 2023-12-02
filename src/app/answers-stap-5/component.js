@@ -24,8 +24,6 @@ export const InputField = () => {
                 setInputText(ev.target.value)
             }}></input></>}
             {!givenAnswer && <button className="mt-6 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => sendAnswer()}>Insturen</button>}
-            {givenAnswer && <h2> Zit er onverhoopt geen getal verstopt in de podcast, probeer het opnieuw:</h2>}
-            {givenAnswer && <button className="mt-6 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => setGivenAnswer(false)}>Nog een keer proberen</button>}
             {givenAnswer && <h2> Weet jij welk getal er verstopt zit in de podcast, onthoud / schrijf op deze en ga verder:</h2>}
             {givenAnswer && <button className="mt-6 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => window.location = '/continue-6'}>Doorgaan naar de volgende opdracht</button>}
         </>

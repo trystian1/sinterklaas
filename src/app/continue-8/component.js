@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react"
 import ContinueComponent from "../components/continue-component";
 
 export default function Component() {

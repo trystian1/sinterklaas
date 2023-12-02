@@ -26,7 +26,7 @@ export const InputField = () => {
             {!givenAnswer && <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => sendAnswer()}>Insturen</button>}
             {givenAnswer && <h2> Zie je geen getal in de afbeelding, probeer het opnieuw:</h2>}
             {givenAnswer && <h2> Weet je het cijfer? Schrijf het op en ga snel naar de volgende stap!</h2>}
-            {givenAnswer && <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => givenAnswer(false)}>Nog een keer proberen</button>}
+            {givenAnswer && <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => setGivenAnswer(false)}>Nog een keer proberen</button>}
             {givenAnswer && <ContinueComponent step="step-3" next={"continue-4"}/>}
         </>
     )
