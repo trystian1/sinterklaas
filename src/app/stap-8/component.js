@@ -1,40 +1,29 @@
 "use client"
-import Link from "next/link"
-import { useEffect, useState } from "react"
-import { useContinueHook } from "../continue-hook"
-import { Poem } from "../poem-component"
-const text = `Marieke streamt allerlei zaken in haar spaarzame vrij tijd
-Van podcast tot series, Trystian is altijd zijn iPad kwijt
-Die vrije tijd is de laatste tijd wat minder geworden.
-Kleine Mats zorgt met zijn grappen en grollen voor wat horden.
-Die Marieke is een goede moeder hoort de Sint van zijn pieten
-Al kan ze soms wel iedereen in het huis schieten
-Iedereen verspreid zijn rommel door het hele huis
-Van Mats kan ze het hebben maar Trystian trapt ze het liefst in zijn kruis
-Je staat graag in de aandacht dat weet de Sint.
-Dus ben benieuwd wat je van het volgende vindt
-We gaan een persoonlijke podcast voor je maken
-En wellicht zit er iets in wat jou helpt de code te kraken
-Luister goed, hou je oren en ogen open
-Want voor je het weet laat je je kans lopen
-Vul in waar je iets over wilt horen op je tweede scherm
-En kies alsjeblieft voor een kosjere term
-`
-export const ContentComponent = () => {
-    const [isImageShowing, setImageShow] = useState(false)
-    const [isMp3Ready, setIsMp3Ready] = useState(false)
-    const [podCastSubject, setPodCastSubject] = useState(false)
-    const [loading, setIsLoading] = useState(false)
 
-    
+import { Poem } from "../poem-component"
+const text = `
+Wat is dit nou, er zit ook nog aan hangslot aan het blik
+Laat nooit de kans gaan om te rijmen op het woord pik
+Wat puberaal allemaal en dat op een zondag
+Laten we de dag dan maar eindigen met een lach
+Wil je weten waar de laatste sleutel hangt 
+Dan moet je zoeken waar Trystian het meest naar verlangt
+De Sint hoort dat Trystian snel weer kan lopen
+Dan heb jij weer tijd voor je hobbies mag je hopen
+Zoals lekker op zondagochtend de tuin bijhouden
+Over lekker een boek lezen zoals je deed voordat jullie trouwden
+Nou dit gezeik duurt alweer veel te lang
+De Sint is het zat en krijgt er een hangzak van, ben ik bang
+Daarom heeft de Sint onze nieuwe premier ingeschakeld
+Ik hoop daarom dat ons nieuwe leider jouw even belt.
+De Sint is blij dat hij weer op sodemietert naar Spanje
+Marieke doe alsjeblieft een keer rustig aan met de Champagne
+
+`
+
+export const ContentComponent = () => {    
     return (<>
-        <img class={`w-1/5 mt-6 transition-opacity ease-in duration-700`} src="geert.jpeg" />
-        <audio controls autoPlay={true} loop={true}>
-          <source
-            src="geertje.mp3"
-            type="audio/mpeg"
-          />
-        </audio>
+      <Poem text={text} callBack={() => setImageShow(true)}/>
     </>
     )
 }
