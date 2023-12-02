@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ContinueComponent from "../components/continue-component";
 
 export const InputField = () => {
 
@@ -25,7 +26,7 @@ export const InputField = () => {
             }}></input></>}
             {!givenAnswer && <button className="mt-6 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => sendAnswer()}>Insturen</button>}
             {givenAnswer && <h2> Weet jij welk getal er verstopt zit in de podcast, onthoud / schrijf op deze en ga verder:</h2>}
-            {givenAnswer && <button className="mt-6 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => window.location = '/continue-6'}>Doorgaan naar de volgende opdracht</button>}
+            <ContinueComponent step={'step-5'} next='/continue-6' />
         </>
     )
 }
