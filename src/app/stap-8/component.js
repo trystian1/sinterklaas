@@ -23,7 +23,7 @@ Marieke doe alsjeblieft een keer rustig aan met de Champagne
 
 export const ContentComponent = () => {    
     return (<>
-      <Poem text={text} callBack={() => setImageShow(true)}/>
+      <Poem text={text} callBack={() => null}/>
     </>
     )
 }
