@@ -1,8 +1,8 @@
 'use client';
 
 export default function ContinueComponent({ step, next }) {
-    const onClick = () => {
-        fetch(`https://whattoeat-cc0b1.ew.r.appspot.com/set-continue-state?step=${step}`);
+    const onClick = async () => {
+        await fetch(`https://whattoeat-cc0b1.ew.r.appspot.com/set-continue-state?step=${step}`);
         window.location = next;
     }
     return (
