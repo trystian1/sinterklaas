@@ -8,7 +8,7 @@ export default function Component() {
     const [inCorrectAnswer, setIncorrectAnswer] = useState(false);
     const [inputText, setInputText] = useState("");
     const sendAnswer = () => {
-        fetch(`https://whattoeat-cc0b1.ew.r.appspot.com/set-anwser-stap-4?inputText=${inputText}`, { mode: 'no-cors' })
+        fetch(`https://whattoeat-cc0b1.ew.r.appspot.com/set-anwser-stap-4?inputText=${inputText}`)
             .then(data => data.json())
             .then(data => {
                 if (data.correct) {

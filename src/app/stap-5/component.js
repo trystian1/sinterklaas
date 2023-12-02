@@ -34,8 +34,7 @@ export const ContentComponent = () => {
     const getAnswer = async () => {
       setTimeout(async () => {
         const response = await fetch(
-          "https://whattoeat-cc0b1.ew.r.appspot.com/ready-podcast-state",
-          { mode: 'no-cors' }
+          "https://whattoeat-cc0b1.ew.r.appspot.com/ready-podcast-state"
         );
         const data = await response.json();
         if (data.podcastSubject) {
