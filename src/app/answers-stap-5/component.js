@@ -8,7 +8,7 @@ export const InputField = () => {
     const [givenAnswer, setGivenAnswer] = useState(false); 
     const sendAnswer = async () => {
         setGivenAnswer(true)
-        await fetch(`http://localhost:8080/podcast-answer?subject=${inputText}`);
+        await fetch(`https://whattoeat-cc0b1.ew.r.appspot.com/podcast-answer?subject=${inputText}`);
         //window.location = '/continue-3';
         
     }

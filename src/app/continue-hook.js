@@ -4,7 +4,7 @@ export const useContinueHook = (previousStep, nextStep) => {
     useEffect(() => {
         const getIfContinue = async () => {
             setTimeout(async () => {
-                const response = await fetch(`http://localhost:8080/get-continue-state?step=${previousStep}`)
+                const response = await fetch(`https://whattoeat-cc0b1.ew.r.appspot.com/get-continue-state?step=${previousStep}`)
                 const data = await response.json();
                 if (data.continue) {
                     window.location = '/' + nextStep

@@ -34,7 +34,7 @@ export const ContentComponent = () => {
     const getAnswer = async () => {
       setTimeout(async () => {
         const response = await fetch(
-          "http://localhost:8080/ready-podcast-state"
+          "https://whattoeat-cc0b1.ew.r.appspot.com/ready-podcast-state"
         );
         const data = await response.json();
         if (data.podcastSubject) {
@@ -97,7 +97,7 @@ export const ContentComponent = () => {
       {isMp3Ready && (
         <audio ref={ref} controls autoPlay={true} loop={true}>
           <source
-            src="http://localhost:8080/download-podcast"
+            src="https://whattoeat-cc0b1.ew.r.appspot.com/download-podcast"
             type="audio/mpeg"
           />
         </audio>

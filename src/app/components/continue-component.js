@@ -2,7 +2,7 @@
 
 export default function ContinueComponent({ step, next }) {
     const onClick = () => {
-        fetch(`http://localhost:8080/set-continue-state?step=${step}`);
+        fetch(`https://whattoeat-cc0b1.ew.r.appspot.com/set-continue-state?step=${step}`);
         window.location = next;
     }
     return (
